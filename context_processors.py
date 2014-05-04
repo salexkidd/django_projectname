@@ -13,7 +13,7 @@ def project_name(request, *args, **kwargs):
     """
     project_name = DEFAULT_PROJECT_NAME
 
-    if hasattr(settings, "PROJECT_NAME"):
-        project_name = settings.PROJECT_NAME
 
-    return {'project_name': project_name}
+    return {
+        'project_name': getattr(settings, "PROJECTNAME", DEFAULT_PROJECT_NAME)
+    }
