@@ -7,6 +7,8 @@ Usage
 
 Add settings TEMPLATE_CONTEXT_PROCESSORS  
 -----------------------------------------
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
 Add django_projectname context processor to CONTEXT_PROCESSORS.
 
     TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
